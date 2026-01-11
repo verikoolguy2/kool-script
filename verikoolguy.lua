@@ -6,17 +6,17 @@ local Luna = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nebula-S
 
 local Window = Luna:CreateWindow({
 
-	Name = "Luna Example Window", -- This Is Title Of Your Window
+	Name = "verikoolguy hub", -- This Is Title Of Your Window
 
-	Subtitle = "A Gray Subtitle", -- A Gray Subtitle next To the main title.
+	Subtitle = "a hub for games", -- A Gray Subtitle next To the main title.
 
 	LogoID = "82795327169782", -- The Asset ID of your logo. Set to nil if you do not have a logo for Luna to use.
 
 	LoadingEnabled = true, -- Whether to enable the loading animation. Set to false if you do not want the loading screen or have your own custom one.
 
-	LoadingTitle = "Luna Interface Suite", -- Header for loading screen
+	LoadingTitle = "Loading Script...", -- Header for loading screen
 
-	LoadingSubtitle = "by Nebula Softworks", -- Subtitle for loading screen
+	LoadingSubtitle = "by verikoolguy", -- Subtitle for loading screen
 
 
 
@@ -141,7 +141,7 @@ Luna:Notification({
 
 local Button = Tab:CreateButton({
 
-	Name = "Insane Elevator Hub",
+	Name = "insane elevator",
 
 	Description = nil,
 
@@ -378,4 +378,5 @@ local ConfigTab = Window:CreateTab({
 
 
 ConfigTab:BuildConfigSection()
+
 
