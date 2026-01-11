@@ -4,7 +4,7 @@ local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/neb
 
 local Window = Starlight:CreateWindow({
     Name = "verikoolhub",
-    Subtitle = "v1.0",
+    Subtitle = "v1.1",
     Icon = 123456789,
 
     LoadingSettings = {
@@ -25,7 +25,7 @@ local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/neb
 
 local Window = Starlight:CreateWindow({
     Name = "verikoolhub",
-    Subtitle = "v1.1",
+    Subtitle = "v1.0",
     Icon = 123456789,
 
     LoadingSettings = {
