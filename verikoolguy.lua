@@ -30,7 +30,7 @@ local Window = Luna:CreateWindow({
 
 
 
-	KeySystem = false, -- As Of Beta 6, Luna Has officially Implemented A Key System!
+	KeySystem = true, -- As Of Beta 6, Luna Has officially Implemented A Key System!
 
 	KeySettings = {
 
@@ -44,7 +44,7 @@ local Window = Luna:CreateWindow({
 
 		SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
 
-		Key = {"1234"},
+		Key = {"verikoolkey1"},
 
 		SecondAction = {
 
@@ -132,7 +132,8 @@ Luna:Notification({
 
 	ImageSource = "Material",
 
-	Content = "This Is A Preview Of Luna's Dynamic Notification System Entailing Estimated/Calculated Wait Times, A Sleek Design, Icons, And A Glassmorphic Look"
+	Content = "Have A Great Day!"
+
 
 })
 
@@ -140,13 +141,13 @@ Luna:Notification({
 
 local Button = Tab:CreateButton({
 
-	Name = "Button Example!",
+	Name = "Solara Hub 500 Games",
 
 	Description = nil,
 
-	Callback = function()
+	Callback = function()loadstring(game:HttpGet('https://solarahub.space/SH.lua'))()
 
-		print("Button Example Pressed!")
+		print("Button Pressed!")
 
 	end
 
