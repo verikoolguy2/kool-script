@@ -112,9 +112,9 @@ Window:CreateHomeTab({
 
 local Tab = Window:CreateTab({
 
-	Name = "Tab Example",
+	Name = "Games",
 
-	Icon = "view_in_ar",
+	Icon = "gamepad",
 
 	ImageSource = "Material",
 
@@ -141,11 +141,11 @@ Luna:Notification({
 
 local Button = Tab:CreateButton({
 
-	Name = "Solara Hub 500 Games",
+	Name = "Insane Elevator Hub",
 
 	Description = nil,
 
-	Callback = function()loadstring(game:HttpGet('https://solarahub.space/SH.lua'))()
+	Callback = function()https://raw.githubusercontent.com/verikoolguy2/kool-script/refs/heads/main/insaneelevator.lua
 
 		print("Button Pressed!")
 
