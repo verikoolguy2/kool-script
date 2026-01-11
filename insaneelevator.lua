@@ -114,7 +114,7 @@ local Tab = Window:CreateTab({
 
 	Name = "Scripts",
 
-	Icon = "gamepad",
+	Icon = "controller_gen",
 
 	ImageSource = "Material",
 
