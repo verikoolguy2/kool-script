@@ -155,6 +155,21 @@ local Button = Tab:CreateButton({
 
 
 
+local Button = Tab:CreateButton({
+
+	Name = "Free VIP Tools",
+
+	Description = nil,
+
+	Callback = function()loadstring(game:HttpGet(('https://pastebin.com/raw/vE8WMLit'),true))()
+
+		print("Button Pressed!")
+
+	end
+
+})
+
+
 local Toggle = Tab:CreateToggle({
 
 	Name = "Toggle Example",
