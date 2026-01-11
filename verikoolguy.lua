@@ -145,7 +145,7 @@ local Button = Tab:CreateButton({
 
 	Description = nil,
 
-	Callback = function()https://raw.githubusercontent.com/verikoolguy2/kool-script/refs/heads/main/insaneelevator.lua
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/verikoolguy2/kool-script/refs/heads/main/insaneelevator.lua"))()
 
 		print("Button Pressed!")
 
