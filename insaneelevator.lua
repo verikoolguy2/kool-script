@@ -114,9 +114,9 @@ local Tab = Window:CreateTab({
 
 	Name = "Scripts",
 
-	Icon = "videogame_asset",
+	Icon = "gamepad-2",
 
-	ImageSource = "Material",
+	ImageSource = "Lucide",
 
 	ShowTitle = true
 
