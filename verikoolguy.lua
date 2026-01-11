@@ -30,7 +30,7 @@ local Window = Luna:CreateWindow({
 
 
 
-	KeySystem = true, -- As Of Beta 6, Luna Has officially Implemented A Key System!
+	KeySystem = false, -- As Of Beta 6, Luna Has officially Implemented A Key System!
 
 	KeySettings = {
 
