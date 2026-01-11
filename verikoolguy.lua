@@ -3,24 +3,24 @@ local Starlight = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/starl
 local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/nebula-icon-library-loader"))()
 
 local Window = Starlight:CreateWindow({
-    Name = "MyScript",
+    Name = "verikoolhub",
     Subtitle = "v1.0",
     Icon = 123456789,
 
     LoadingSettings = {
-        Title = "My Script Hub",
-        Subtitle = "Welcome to My Script Hub",
+        Title = "VeriKoolHub",
+        Subtitle = "Welcome to VeriKoolHub",
     },
 
     FileSettings = {
-        ConfigFolder = "MyScript"
+        ConfigFolder = "KoolScript"
     },
 })
 
 local TabSection = Window:CreateTabSection("Tab Section")
 
 local Tab = TabSection:CreateTab({
-    Name = "Tab",
+    Name = "Games",
     Icon = NebulaIcons:GetIcon('view_in_ar', 'Material'),
     Columns = 2,
 }, "INDEX")
@@ -151,3 +151,5 @@ local Dropdown = TLabel:AddDropdown({
         print("Team Selected:", v)
     end,
 }, "INDEX")
+
+
