@@ -1,391 +1,463 @@
-local Starlight = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/starlight"))()  
+--[[https://github.com/Nebula-Softworks/Luna-Interface-Suite/blob/main/Documentation.md]]
 
-local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/nebula-icon-library-loader"))()
+local Luna = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nebula-Softworks/Luna-Interface-Suite/refs/heads/master/source.lua", true))()
 
-local Window = Starlight:CreateWindow({
-    Name = "verikoolhub",
-    Subtitle = "v1.1",
-    Icon = 123456789,
 
-    LoadingSettings = {
-        Title = "VeriKoolHub",
-        Subtitle = "Welcome to VeriKoolHub",
-    },
 
-    FileSettings = {
-        ConfigFolder = "KoolScript"
-    },
+local Window = Luna:CreateWindow({
+
+	Name = "verikoolguy's Script Hub", -- This Is Title Of Your Window
+
+	Subtitle = "A Script For Multiple Games", -- A Gray Subtitle next To the main title.
+
+	LogoID = "82795327169782", -- The Asset ID of your logo. Set to nil if you do not have a logo for Luna to use.
+
+	LoadingEnabled = true, -- Whether to enable the loading animation. Set to false if you do not want the loading screen or have your own custom one.
+
+	LoadingTitle = "Loading Script...", -- Header for loading screen
+
+	LoadingSubtitle = "by verikoolguy", -- Subtitle for loading screen
+
+
+
+	ConfigSettings = {
+
+		RootFolder = nil, -- The Root Folder Is Only If You Have A Hub With Multiple Game Scripts and u may remove it. DO NOT ADD A SLASH
+
+		ConfigFolder = "Verikoolguy's Script Hub" -- The Name Of The Folder Where Luna Will Store Configs For This Script. DO NOT ADD A SLASH
+
+	},
+
+
+
+	KeySystem = false, -- As Of Beta 6, Luna Has officially Implemented A Key System!
+
+	KeySettings = {
+
+		Title = "Key System",
+
+		Subtitle = "Key Is verikoolkey1",
+
+		Note = "Best Key System Ever! Also, Please Use A HWID Keysystem like Pelican, Luarmor etc. that provide key strings based on your HWID since putting a simple string is very easy to bypass, the key is 1234!",
+
+		SaveInRoot = false, -- Enabling will save the key in your RootFolder (YOU MUST HAVE ONE BEFORE ENABLING THIS OPTION)
+
+		SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+
+		Key = {"verikoolkey1"},
+
+		SecondAction = {
+
+			Enabled = true,
+
+			Type = "Link", -- You can also put discord as an option, if your are doing that, don’t include discord.gg as Luna will auto add it as a prefix, just replace it with your identifier, example, if your are doing discord.gg/mspaint, just use mspaint.
+
+			Parameter = ""
+
+		}
+
+	}
+
 })
 
 
-
-local Starlight = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/starlight"))()  
-
-local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/nebula-icon-library-loader"))()
-
-local Window = Starlight:CreateWindow({
-    Name = "verikoolhub",
-    Subtitle = "v1.0",
-    Icon = 123456789,
-
-    LoadingSettings = {
-        Title = "VeriKoolHub",
-        Subtitle = "Welcome to VeriKoolHub",
-    },
-
-    FileSettings = {
-        ConfigFolder = "KoolScript"
-    },
-})
-
-local TabSection = Window:CreateTabSection("Tab Section")
-
-local Tab = TabSection:CreateTab({
-    Name = "Games",
-    Icon = NebulaIcons:GetIcon('view_in_ar', 'Material'),
-    Columns = 2,
-}, "INDEX")
-
-local Groupbox = Tab:CreateGroupbox({
-    Name = "Groupbox",
-    Column = 1,
-}, "INDEX")
-
-local Button = Groupbox:CreateButton({
-    Name = "insane elevator",
-    Icon = NebulaIcons:GetIcon('check', 'Material'),
-    Tooltip = "This is A Tooltip!",
-    Style = 1,
-    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/verikoolguy2/kool-script/refs/heads/main/insaneelevator.lua"))()
-    end,
-}, "INDEX")
-
-local Button = Groupbox:CreateButton({
-    Name = "Regular Button",
-    Icon = NebulaIcons:GetIcon('check', 'Material'),
-    Tooltip = "This is A Tooltip!",
-    Style = 2,
-    Callback = function()
-         print("hi from Regular Button!")
-    end,
-}, "INDEX")
-
-local Toggle = Groupbox:CreateToggle({
-    Name = "Toggle",
-    CurrentValue = false,
-    Style = 1,
-    Callback = function(Value)
-        print("ToggleValue =", Value)
-    end,
-}, "INDEX")
-
-local Checkbox = Groupbox:CreateToggle({
-    Name = "Checkbox",
-    CurrentValue = false,
-    Style = 2,
-    Callback = function(Value)
-        print("Checkbox =", Value)
-    end,
-}, "INDEX")
-
-local Slider = Groupbox:CreateSlider({
-    Name = "Slider",
-    Icon = NebulaIcons:GetIcon('bar-chart', 'Lucide'),
-    Range = {0, 100},
-    Increment = 1,
-    Callback = function(v)
-        print("Slider Val =", v)
-    end,
-}, "INDEX")
-
-
-local Input = Groupbox:CreateInput({
-    Name = "Dynamic Input",
-    Icon = NebulaIcons:GetIcon('text-cursor-input', 'Lucide'),
-    CurrentValue = "",
-    PlaceholderText = "Placeholder Text",
-    Callback = function(Text)
-            print("Current Text =", Text)
-    end,
-}, "INDEX")
-
-
-local Label = Groupbox:CreateButton({
-    Name = "Label"
-}, "INDEX")
-
-local Paragraph = Groupbox:CreateParagraph({
-    Name = "Paragraph",
-    Content = [[Content of your paragraph goes here. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem. Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. 
-
-    Also Supports Multi Lining
-    ]]
-
-}, "INDEX")
-
-local KeyLabel = Groupbox:CreateButton({
-    Name = "Keybind"
-}, "INDEX")
-local Bind = KeyLabel:AddBind({
-    HoldToInteract = false,
-    CurrentValue = "Q",
-    Callback = function(v)
-    print("Keybind =", v)
-    end,
-}, "INDEX")
-
-
-local DLabel = Groupbox:CreateButton({
-    Name = "Regular Dropdown"
-}, "INDEX")
-local Dropdown = DLabel:AddDropdown({
-    Options = {"Option 1", "Option 2"},
-    CurrentOptions = {"Option 1"},
-    Callback = function(Options)
-        print("Option =", Options)
-    end,
-}, "INDEX")
-
-
-local PLabel = Groupbox:CreateButton({
-    Name = "Player Dropdown"
-}, "INDEX")
-
-local PlayersDropdown = PLabel:CreateDropdown({
-    Options = {},
-    CurrentOptions = {},
-    Special = 1, -- Optional flag if supported by the UI library
-    Callback = function(Selected)
-        print("Selected Player:", Selected)
-    end,
-}, "INDEX")
-
-
-local TLabel = Groupbox:CreateButton({
-    Name = "Team Dropdown"
-}, "INDEX")
-
-local Dropdown = TLabel:AddDropdown({
-    Options = {},
-    CurrentOptions = {},
-    Callback = function(v)
-        print("Team Selected:", v)
-    end,
-}, "INDEX")
-
-TabSection:CreateCustomTab({
-Name = "FE Scripts",
-Icon = NebulaIcons:GetIcon('view_in_ar', 'Material'),
-Page = object,
-}, "INDEX")
-
-local Groupbox = Tab:CreateGroupbox({
-Name = "Groupbox 2",
-Column = 1,
-}, "INDEX")
-local Button = Groupbox:CreateButton({
-    Name = "FE Ragdoll R15 R6 [not in all games]",
-    Icon = NebulaIcons:GetIcon('check', 'Material'),
-    Tooltip = "This is A Tooltip!",
-    Style = 1,
-    Callback = function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/verikoolguy2/kool-script/refs/heads/main/ragdoll.lua'),true))()
-    end,
-}, "INDEX")
 
 Window:CreateHomeTab({
-    -- Logic is done this way to not immediately rule out unknown executors.
-    -- For example, if Delta is confirmed to break with your script, it can go in Unsupported.
-    -- If users use Trigon but you don't have it/unsure whether it works, it can be left out and marked as a maybe
 
-    SupportedExecutors = {}, 
-    UnsupportedExecutors = {},
+	SupportedExecutors = {
 
-    DiscordInvite = "1234", -- The Discord Invite Link. Do Not Include discord.gg/ | Only Include the code.
-    Backdrop = nil, -- A Custom Image to use for the backdrop. Set to 0 to use the Game's Thumbnail. Defaults To A Roblox Void. Set to a blank image to not use.  
+		"Synapse X",
 
-    IconStyle = 1, -- 1 for solid, 2 for outline
+		"Krnl",
 
-    Changelog = {
-        -- Pass Tables For Each Update
-        
-        {
-            Title = "Example Update",
-            Date = "25th october twentyfive",
-            Description = "blablblablajana \n blabakjakd",
-        },
-        {
-            Title = "Second Update!!",
-            Date = "sometime after example update",
-            Description = "",
-        }  
-    }
+		"ProtoSmasher",
+
+		"Fluxus",
+
+		"Script-Ware",
+
+		"EasyExploits",
+
+		"Electron",
+
+		"JJSploit",
+
+		"Calamari",
+
+		"SirHurt",
+
+		"Sentinel",
+
+		"WEAREDEVS",
+
+		"Comet",
+
+		"Cellery",
+
+		"Wave",
+
+		"CODex",
+
+		"Delta"
+
+	},
+
+	DiscordInvite = "1234", -- same thing here
+
+	Icon = 1
+
 })
 
-local TabSection = Window:CreateTabSection("Tab Section")
-
-local Tab = TabSection:CreateTab({
-    Name = "Games",
-    Icon = NebulaIcons:GetIcon('view_in_ar', 'Material'),
-    Columns = 2,
-}, "INDEX")
-
-local Groupbox = Tab:CreateGroupbox({
-    Name = "Groupbox",
-    Column = 1,
-}, "INDEX")
-
-local Button = Groupbox:CreateButton({
-    Name = "insane elevator",
-    Icon = NebulaIcons:GetIcon('check', 'Material'),
-    Tooltip = "This is A Tooltip!",
-    Style = 1,
-    Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/verikoolguy2/kool-script/refs/heads/main/insaneelevator.lua"))()
-    end,
-}, "INDEX")
-
-local Button = Groupbox:CreateButton({
-    Name = "Regular Button",
-    Icon = NebulaIcons:GetIcon('check', 'Material'),
-    Tooltip = "This is A Tooltip!",
-    Style = 2,
-    Callback = function()
-         print("hi from Regular Button!")
-    end,
-}, "INDEX")
-
-local Toggle = Groupbox:CreateToggle({
-    Name = "Toggle",
-    CurrentValue = false,
-    Style = 1,
-    Callback = function(Value)
-        print("ToggleValue =", Value)
-    end,
-}, "INDEX")
-
-local Checkbox = Groupbox:CreateToggle({
-    Name = "Checkbox",
-    CurrentValue = false,
-    Style = 2,
-    Callback = function(Value)
-        print("Checkbox =", Value)
-    end,
-}, "INDEX")
-
-local Slider = Groupbox:CreateSlider({
-    Name = "Slider",
-    Icon = NebulaIcons:GetIcon('bar-chart', 'Lucide'),
-    Range = {0, 100},
-    Increment = 1,
-    Callback = function(v)
-        print("Slider Val =", v)
-    end,
-}, "INDEX")
 
 
-local Input = Groupbox:CreateInput({
-    Name = "Dynamic Input",
-    Icon = NebulaIcons:GetIcon('text-cursor-input', 'Lucide'),
-    CurrentValue = "",
-    PlaceholderText = "Placeholder Text",
-    Callback = function(Text)
-            print("Current Text =", Text)
-    end,
-}, "INDEX")
+local Tab = Window:CreateTab({
 
+	Name = "Scripts",
 
-local Label = Groupbox:CreateButton({
-    Name = "Label"
-}, "INDEX")
+	Icon = "gamepad",
 
-local Paragraph = Groupbox:CreateParagraph({
-    Name = "Paragraph",
-    Content = [[Content of your paragraph goes here. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem. Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. Lorem Ipsum Dolor Sit Amet. 
+	ImageSource = "Material",
 
-    Also Supports Multi Lining
-    ]]
+	ShowTitle = true
 
-}, "INDEX")
-
-local KeyLabel = Groupbox:CreateButton({
-    Name = "Keybind"
-}, "INDEX")
-local Bind = KeyLabel:AddBind({
-    HoldToInteract = false,
-    CurrentValue = "Q",
-    Callback = function(v)
-    print("Keybind =", v)
-    end,
-}, "INDEX")
-
-
-local DLabel = Groupbox:CreateButton({
-    Name = "Regular Dropdown"
-}, "INDEX")
-local Dropdown = DLabel:AddDropdown({
-    Options = {"Option 1", "Option 2"},
-    CurrentOptions = {"Option 1"},
-    Callback = function(Options)
-        print("Option =", Options)
-    end,
-}, "INDEX")
-
-
-local PLabel = Groupbox:CreateButton({
-    Name = "Player Dropdown"
-}, "INDEX")
-
-local PlayersDropdown = PLabel:CreateDropdown({
-    Options = {},
-    CurrentOptions = {},
-    Special = 1, -- Optional flag if supported by the UI library
-    Callback = function(Selected)
-        print("Selected Player:", Selected)
-    end,
-}, "INDEX")
-
-
-local TLabel = Groupbox:CreateButton({
-    Name = "Team Dropdown"
-}, "INDEX")
-
-local Dropdown = TLabel:AddDropdown({
-    Options = {},
-    CurrentOptions = {},
-    Callback = function(v)
-        print("Team Selected:", v)
-    end,
-}, "INDEX")
-
-local TabSection = Window:CreateTabSection("Tab Section")
-
-local Tab = TabSection:CreateTab({
-    Name = "Tab",
-    Icon = NebulaIcons:GetIcon('view_in_ar', 'Material'),
-    Columns = 2,
-}, "INDEX")
-
-local Groupbox = Tab:CreateGroupbox({
-    Name = "Groupbox",
-    Column = 1,
-}, "INDEX")
-
-local Dialog = Window:PromptDialog({
-    Name = "Header",
-    Content = "Description",
-    Type = 1,
-    Actions = { 
-        Primary = {
-            Name = "Okay!",
-            Icon = NebulaIcons:GetIcon("check", "Material"),
-            Callback = function()
-
-            end
-        }, 
-        {
-            Name = "Cancel",
-            Callback = function()
-
-            end
-        },
-    }
 })
+
+
+
+Luna:Notification({
+
+	Title = "Notification",
+
+	Icon = "notifications_active",
+
+	ImageSource = "Material",
+
+	Content = " Script Successfully Launched. "
+
+
+})
+
+
+
+local Button = Tab:CreateButton({
+
+	Name = "Valyse",
+
+	Description = nil,
+
+	Callback = function()loadstring(game:HttpGet("https://github.com/KhSaeed90/Roblox/raw/workspace/4104106043"))()
+
+		print("Button Pressed!")
+
+	end
+
+})
+
+
+
+local Button = Tab:CreateButton({
+
+	Name = "Free VIP Tools",
+
+	Description = nil,
+
+	Callback = function()loadstring(game:HttpGet(('https://pastebin.com/raw/vE8WMLit'),true))()
+
+		print("Button Pressed!")
+
+	end
+
+})
+
+
+Tab:CreateSection("Dandy's World Scripts")
+
+Tab:CreateDivider()
+
+
+local Button = Tab:CreateButton({
+
+	Name = "Hex Hub (No Key)",
+
+	Description = nil,
+
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/randomaccve/dandy-world/refs/heads/main/hex%20hub"))()
+
+		print("Button Pressed!")
+
+	end
+
+})
+
+
+local Button = Tab:CreateButton({
+
+	Name = "Dandy's World Hub (No Key)",
+
+	Description = nil,
+
+	Callback = function()loadstring(game:HttpGet("https://pastebin.com/raw/H3u62n7D"))()
+
+		print("Button Pressed!")
+
+	end
+
+})
+
+
+
+local Button = Tab:CreateButton({
+
+	Name = "Project Stark (Key Needed)",
+
+	Description = nil,
+
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Urbanstormm/Project-Stark/main/Main.lua"))()
+
+		print("Button Pressed!")
+
+	end
+
+})
+
+
+
+local Tab = Window:CreateTab({
+
+	Name = "Extras",
+
+	Icon = "star",
+
+	ImageSource = "Material",
+
+	ShowTitle = true
+
+})
+
+
+
+
+local Toggle = Tab:CreateToggle({
+
+	Name = "Toggle Example",
+
+	Description = nil,
+
+	CurrentValue = false,
+
+	Callback = function(Value)
+
+		print("Toggle state is:", Value)
+
+	end
+
+}, "Toggle")
+
+
+
+Tab:CreateSection("This Is a section, below is a divider")
+
+Tab:CreateDivider()
+
+
+
+local Slider = Tab:CreateSlider({
+
+	Name = "Slider Example",
+
+	Range = {0, 200},
+
+	Increment = 5,
+
+	CurrentValue = 100,
+
+	Callback = function(Value)
+
+		print("Slider value is:", Value)
+
+	end
+
+}, "Slider")
+
+
+
+local ColorPicker = Tab:CreateColorPicker({
+
+	Name = "Color Picker Example",
+
+	Color = Color3.fromRGB(86, 171, 128),
+
+	Flag = "ColorPicker1",
+
+	Callback = function(Value)
+
+		print("Selected Color RGB:", Value.R * 255, Value.G * 255, Value.B * 255)
+
+	end
+
+}, "ColorPicker")
+
+
+
+local Input = Tab:CreateInput({
+
+	Name = "Dynamic Input Example",
+
+	Description = nil,
+
+	PlaceholderText = "Input Placeholder",
+
+	CurrentValue = "",
+
+	Numeric = false,
+
+	MaxCharacters = nil,
+
+	Enter = false,
+
+	Callback = function(Text)
+
+		print("Input box text:", Text)
+
+	end
+
+}, "Input")
+
+
+
+local Dropdown = Tab:CreateDropdown({
+
+	Name = "Dropdown Example",
+
+	Description = nil,
+
+	Options = {
+
+		"Option 1", "Option 2", "Option 3", "Option 4", "Option 5",
+
+		"Option 6", "Option 7", "Option 8", "Option 9", "Option 10",
+
+		"Option 11", "Option 12", "Option 13", "Option 14", "Option 15",
+
+		"Option 16", "Option 17", "Option 18", "Option 19", "Option 20",
+
+		"Option 21", "Option 22", "Option 23", "Option 24", "Option 25"
+
+	},
+
+	CurrentOption = {"Option 1"},
+
+	MultipleOptions = false,
+
+	SpecialType = nil,
+
+	Callback = function(Options)
+
+		print("Dropdown selected:", Options)
+
+	end
+
+}, "Dropdown")
+
+
+
+local Bind = Tab:CreateBind({
+
+	Name = "Bind Example",
+
+	Description = nil,
+
+	CurrentBind = "Q",
+
+	HoldToInteract = false,
+
+	Callback = function(BindState)
+
+		print("Keybind activated. State:", BindState)
+
+	end,
+
+	OnChangedCallback = function(Bind)
+
+		print("Keybind changed to:", Bind.Name)
+
+	end,
+
+}, "Bind")
+
+
+
+local Label1 = Tab:CreateLabel({
+
+	Text = "This is a Default Label",
+
+	Style = 1
+
+})
+
+
+
+local Label2 = Tab:CreateLabel({
+
+	Text = "This is an Information Label",
+
+	Style = 2
+
+})
+
+
+
+local Label3 = Tab:CreateLabel({
+
+	Text = "This is a Warning Label",
+
+	Style = 3
+
+})
+
+
+
+local Paragraph = Tab:CreateParagraph({
+
+	Title = "Paragraph Example ",
+
+	Text = "This Is A Paragraph. You Can Type Very Long Strings Here And They'll Automatically Fit! This Counts As A Description Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Right? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text? Also Did I Mention This Has Rich Text?"
+
+})
+
+
+
+local ThemeTab = Window:CreateTab({
+
+	Name = "Theme Tab",
+
+	Icon = "palette",
+
+	ImageSource = "Material",
+
+	ShowTitle = true
+
+})
+
+
+
+ThemeTab:BuildThemeSection()
+
+
+
+local ConfigTab = Window:CreateTab({
+
+	Name = "Config Tab",
+
+	Icon = "settings",
+
+	ImageSource = "Material",
+
+	ShowTitle = true
+
+})
+
+
+
+ConfigTab:BuildConfigSection()
+
