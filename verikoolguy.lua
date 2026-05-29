@@ -175,6 +175,8 @@ Tab:CreateDivider()
 
 Tab:CreateSection("Dandy's World Scripts")
 
+
+
 local Button = Tab:CreateButton({
 
 	Name = "Hex Hub (No Key)",
@@ -190,6 +192,7 @@ local Button = Tab:CreateButton({
 })
 
 
+
 local Button = Tab:CreateButton({
 
 	Name = "Dandy's World Hub (No Key)",
@@ -203,6 +206,7 @@ local Button = Tab:CreateButton({
 	end
 
 })
+
 
 
 local Button = Tab:CreateButton({
@@ -256,21 +260,6 @@ local Button = Tab:CreateButton({
 })
 
 
-local Button = Tab:CreateButton({
-
-	Name = "Fantasma Hub",
-
-	Description = nil,
-
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/gaga123308/Fantasma-hub-new/refs/heads/main/obfuscated_script-1779937274866.lua.txt"))()
-
-
-		print("Button Pressed!")
-
-	end
-
-})
-
 
 local Tab = Window:CreateTab({
 
@@ -283,6 +272,7 @@ local Tab = Window:CreateTab({
 	ShowTitle = true
 
 })
+
 
 
 local Button = Tab:CreateButton({
@@ -300,29 +290,6 @@ local Button = Tab:CreateButton({
 })
 
 
-local Button = Tab:CreateButton({
-
-	Name = "Universal Tas (PC Only)",
-
-	Description = nil,
-
-	Callback = function--// TAS CONFIGURATION //--
-getgenv().AutoLoadAndPlayFile = ""          -- File name (e.g. "MyRun") to instantly load & play. Leave blank ("") for normal creator GUI.
-getgenv().ExtremeSmoothing = false       -- Set to true to downsample frames and smoothly interpolate (Warning: Will clip through walls!)
-getgenv().TargetSmoothingFPS = 24           -- The FPS to compress the recording into if ExtremeSmoothing is true.
-getgenv().ShowVelocityDuringPlayback = false -- Set to true to show the velocity trajectory curve while playing back.
-getgenv().ShowTASPathDuringPlayback = false  -- Set to true to draw the cyan line tracing the future path of the TAS.
-getgenv().PlaybackCamera = false           -- Set to true to playback the recorded camera movements.
-
---// EXECUTE TAS SCRIPT //--
-loadstring(game:HttpGet('https://github.com/tomatotxt/TAS-Creator/raw/main/script.luau'))()
-
-		print("Button Pressed!")
-
-	end
-
-})
-
 
 local Button = Tab:CreateButton({
 
@@ -339,22 +306,6 @@ local Button = Tab:CreateButton({
 
 })
 
-
-local Button = Tab:CreateButton({
-
-	Name = "Universal Tas (PC And Mobile)",
-
-	Description = nil,
-
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/bbssgggv112/skwnqnksnw/refs/heads/main/tas.txt"))()
-task.wait(1)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/bbssgggv112/skwnqnksnw/refs/heads/main/grass.txt"))()
-
-		print("Button Pressed!")
-
-	end
-
-})
 
 
 local Button = Tab:CreateButton({
