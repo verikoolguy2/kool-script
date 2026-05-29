@@ -205,7 +205,6 @@ local Button = Tab:CreateButton({
 })
 
 
-
 local Button = Tab:CreateButton({
 
 	Name = "Project Stark (Key Needed)",
@@ -219,9 +218,6 @@ local Button = Tab:CreateButton({
 	end
 
 })
-
-
-
 
 Tab:CreateDivider()
 
@@ -244,8 +240,6 @@ local Button = Tab:CreateButton({
 })
 
 
-
-
 local Button = Tab:CreateButton({
 
 	Name = "Sander XY",
@@ -262,7 +256,6 @@ local Button = Tab:CreateButton({
 })
 
 
-
 local Button = Tab:CreateButton({
 
 	Name = "Fantasma Hub",
@@ -277,8 +270,6 @@ local Button = Tab:CreateButton({
 	end
 
 })
-
-
 
 
 local Tab = Window:CreateTab({
@@ -309,7 +300,6 @@ local Button = Tab:CreateButton({
 })
 
 
-
 local Button = Tab:CreateButton({
 
 	Name = "Universal Tas (PC Only)",
@@ -334,7 +324,6 @@ loadstring(game:HttpGet('https://github.com/tomatotxt/TAS-Creator/raw/main/scrip
 })
 
 
-
 local Button = Tab:CreateButton({
 
 	Name = "Universal Tas Fling (PC And Mobile)",
@@ -349,7 +338,6 @@ local Button = Tab:CreateButton({
 	end
 
 })
-
 
 
 local Button = Tab:CreateButton({
@@ -369,7 +357,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/bbssgggv112/skwnqnksn
 })
 
 
-
 local Button = Tab:CreateButton({
 
 	Name = "F3X BTools (Client Sided)",
@@ -385,7 +372,6 @@ local Button = Tab:CreateButton({
 })
 
 
-
 local Button = Tab:CreateButton({
 
 	Name = "FE Ragdoll",
@@ -399,24 +385,6 @@ local Button = Tab:CreateButton({
 	end
 
 })
-
-
-
-local Button = Tab:CreateButton({
-
-	Name = "FE Walk On Walls",
-
-	Description = nil,
-
-	Callback = function()loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Wall-Walk-9153"))()
-
-		print("Button Pressed!")
-
-	end
-
-})
-
-
 
 
 local Toggle = Tab:CreateToggle({
@@ -642,4 +610,3 @@ local ConfigTab = Window:CreateTab({
 
 
 ConfigTab:BuildConfigSection()
-
